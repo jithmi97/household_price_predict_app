@@ -71,6 +71,6 @@ user_input = pd.DataFrame({
 })
 
 # Predict household price when the user clicks the "Predict" button
-if st.button("Predict"):
+if st.button("Predict Price",bg_color="#0074cc", text_color="black"):
     predicted_price = predict_household_price(user_input)
     st.success(f"Predicted Household Price: {predicted_price:.2f}")
