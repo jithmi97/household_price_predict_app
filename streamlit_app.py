@@ -69,21 +69,22 @@ user_input = pd.DataFrame({
     'Negeri': [negeri],
     'Daerah': [daerah]
 })
-
 # Predict household price when the user clicks the "Predict" button
-if st.button("Predict Price",unsafe_allow_html=True):
-    predicted_price = predict_household_price(user_input)
-    st.success(f"Predicted Household Price: {predicted_price:.2f}")
-# Add HTML to style the button
+predict_button = st.button("Predict Price")
+
+# Apply custom CSS styling to the button
 st.markdown(
     """
     <style>
-        .css-2trqyj-builtin {
-            background-color: #0074cc;
-            color: black;
+        .css-2trqyj {
+            background-color: #0061e0;
+            color: white;
         }
     </style>
     """,
     unsafe_allow_html=True
 )
 
+if predict_button:
+    predicted_price = predict_household_price(user_input)
+    st.success(f"Predicted Household Price: {predicted_price:.2f}")
