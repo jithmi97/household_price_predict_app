@@ -4,7 +4,6 @@ import subprocess
 subprocess.run(["pip", "install", "scikit-learn"])
 import streamlit as st
 import pandas as pd
-import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 import joblib
