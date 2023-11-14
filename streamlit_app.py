@@ -1,7 +1,3 @@
-import subprocess
-
-# Use subprocess to run the pip install command
-subprocess.run(["pip", "install", "scikit-learn"])
 import streamlit as st
 import pandas as pd
 from sklearn.model_selection import train_test_split
